@@ -8,7 +8,7 @@ git clone https://github.com/Milansuman/cursed_text.git && cd cursed_text
 cargo build
 ```
 # Release
-Release v1.0.0 is available in the release tab
+Coming soon
 
 # Usage
 ```

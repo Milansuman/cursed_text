@@ -12,7 +12,15 @@ impl Config{
         }
 
         let input = args[1].clone();
-        let craziness: i32 = args[2].clone().trim().parse().unwrap();
+        let craziness: i32 = match args[2].as_str(){
+                                "0" => 0,
+                                "1" => 10,
+                                "2" => 1000,
+                                "3" => 10000,
+                                "4" => 100000,
+                                "5" => 500000,
+                                _ => 0
+                            };
         Ok(Config{input, craziness})
     }
 

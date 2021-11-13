@@ -7,21 +7,26 @@ pub struct Config{
 
 impl Config{
     pub fn new(args: &[String]) -> Result<Config, &str>{
-        if args.len() != 3{
+        if args.len() < 2 || args.len() > 3{
             return Err("Usage: cursed_text [string] [int]");
         }
 
         let input = args[1].clone();
-        let craziness: i32 = match args[2].as_str(){
-                                "0" => 0,
-                                "1" => 10,
-                                "2" => 1000,
-                                "3" => 10000,
-                                "4" => 100000,
-                                "5" => 500000,
-                                _ => 0
-                            };
-        Ok(Config{input, craziness})
+        if args.len() == 3{
+            let craziness: i32 = match args[2].as_str(){
+                "0" => 0,
+                "1" => 10,
+                "2" => 1000,
+                "3" => 10000,
+                "4" => 100000,
+                "5" => 500000,
+                _ => 0
+            };
+            Ok(Config{input, craziness})
+        }else{
+            Ok(Config{input, craziness:10})
+        }
+        
     }
 
     pub fn curse(&self) -> String{

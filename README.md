@@ -8,7 +8,7 @@ git clone https://github.com/Milansuman/cursed_text.git && cd cursed_text
 cargo build
 ```
 # Release
-Coming soon
+Get curse v0.1.0-aplha from the releases tab.
 
 # Usage
 ```

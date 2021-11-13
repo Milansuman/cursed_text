@@ -13,6 +13,6 @@ Get curse v0.1.0-aplha from the releases tab.
 
 # Usage
 ```
-./curse input_string [craziness_level 0..5]
+curse input_string [craziness_level 0..5]
 ```
 Where `input_string` is the string you want to curse and `[craziness_level` is an integer denoting how cursed the output should be.
